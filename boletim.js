@@ -9,7 +9,6 @@ const notaMinima = parseFloat(prompt("Digite a nota mínima:"));
 
 let linhas = '';
 
-// Evento de submissão do formulário
 form.addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -22,7 +21,6 @@ function adicionaLinha() {
     const inputNomeAtividade = document.getElementById('nome-atividade');
     const inputNotaAtividade = document.getElementById('nota-atividade');
 
-    // Verifica se a atividade já foi inserida
     if (atividades.includes(inputNomeAtividade.value)) {
         alert(`A atividade: ${inputNomeAtividade.value} já foi inserida`);
     } else {
@@ -38,7 +36,6 @@ function adicionaLinha() {
         linhas += linha;
     }
 
-    // Limpa os campos de entrada
     inputNomeAtividade.value = '';
     inputNotaAtividade.value = '';
 }
